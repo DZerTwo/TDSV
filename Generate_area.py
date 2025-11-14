@@ -207,10 +207,10 @@ def analyze_bam_file_parallel(bam_file, output_dir, area_path, num_processes=1):
 
 
 if __name__ == "__main__":
-    bam_file = "/ifs/laicx/00.data/HG002_PB_70x_RG_HP10XtrioRTG.bam"  
+    bam_file = "HG002_PB_70x_RG_HP10XtrioRTG.bam"  
     num_processes = 15
-    sv_output_dir = "/home/zhangjj/01.code/06.Mul-Graph/sv_results2.0"  # 指定输出目录
-    area_path = "/home/zhangjj/01.code/06.Mul-Graph/area_list2.0"
+    sv_output_dir = "sv_results" 
+    area_path = "area_list"
     
     # 分析BAM文件并保存每个染色体的结果
     analyze_bam_file_parallel(bam_file, sv_output_dir, area_path, num_processes)
@@ -222,6 +222,5 @@ if __name__ == "__main__":
     #     for region in candidate_sv_regions:
     #         f.write(f"{region[0]}\t{region[1]}\t{region[2]}\t{region[3]}\t{region[4]}\n")
     
-    # #demo
-    # output_dir = "/home/zhangjj/01.code/06.Mul-Graph/demo_chromosome_sv_results"  # 指定输出目录
+    # output_dir = "chromosome_sv_results"  
     # analyze_chromosome((bam_file, "15", output_dir))
